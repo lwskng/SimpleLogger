@@ -2,7 +2,8 @@
 
 ## Purpose
 Consider this as a little helper for developer.
-Use this if you need to log and you don't want to bring a heavy (or another) dependency into your project.
+Use this if you need to log and you don't want to bring a heavy (or another) dependency into your project. 
+Keep in mind it has the simpliest functionality - just writes thread-safely to ostream&. 
 
 ## Details
 As for C++20 it uses:
