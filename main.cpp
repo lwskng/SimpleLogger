@@ -30,7 +30,7 @@ auto another_func = [](std::ostream &os, size_t thread_id, int a, double b) {
 
 int main () {
 
-    dev_tools::Logger logger("v 0.1, side branch"s, std::clog);
+    dev_tools::Logger logger("v 0.1, side branch"s, std::cout, true);
     logger.LogMessage("Logger created"s);
 
     const int thread_size = 100;

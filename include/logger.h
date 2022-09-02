@@ -5,6 +5,7 @@
 #pragma once
 
 #include "timestamp.h"
+#include "colors.h"
 
 #include <chrono>
 #include <ostream>
@@ -20,9 +21,10 @@ namespace dev_tools {
     template <typename Duration = Milliseconds>
     class Logger {
     public:
-        explicit Logger(std::string id, std::ostream& os)
+        explicit Logger(std::string id, std::ostream& os, bool use_colors = false)
                 : id_(id)
                 , os_(os)
+                , use_colors_ (use_colors)
         {}
 
         template <typename... Args>
@@ -36,13 +38,18 @@ namespace dev_tools {
         void LogFunc(Fn fn, Args... args) const {
             Timestamp<Duration> timestamp;
             std::osyncstream sync_os_(os_);
-            sync_os_ << id_ << "> "sv << timestamp << ": "sv;
-            fn(sync_os_, args...);
+            if (use_colors_) {
+                sync_os_ << FGRN(id_) << "> "sv << BOLD(FYEL(timestamp)) << ": "sv;
+            } else {
+                sync_os_ << id_ << "> "sv << timestamp << ": "sv;
+            }
+            fn(sync_os_, std::forward<Args>(args)...);
             sync_os_ << std::endl;
         }
     private:
         std::string id_;
         std::ostream& os_;
+        bool use_colors_;
     };
 
 }//!namespace
