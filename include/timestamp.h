@@ -124,7 +124,7 @@ namespace dev_tools {
             return result;
         }
 
-        //todo: unfinished
+        //todo: WIP, unfinished
         template<class Duration>
         Timestamp<Duration> operator + ([[maybe_unused]] const Timestamp<Duration>& lhs, [[maybe_unused]] const Timestamp<Duration>& rhs){
             Timestamp<Duration> result;

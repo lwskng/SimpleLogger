@@ -10,8 +10,8 @@
 #include <ostream>
 #include <syncstream>
 
-#ifndef SIMPLELOGGET_LOGGER_H
-#define SIMPLELOGGET_LOGGER_H
+#ifndef SIMPLELOGGER_LOGGER_H
+#define SIMPLELOGGER_LOGGER_H
 
 namespace dev_tools {
 
@@ -47,4 +47,4 @@ namespace dev_tools {
 
 }//!namespace
 
-#endif //SIMPLELOGGET_LOGGER_H
+#endif //SIMPLELOGGER_LOGGER_H
