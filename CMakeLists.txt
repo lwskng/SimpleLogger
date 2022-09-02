@@ -3,4 +3,4 @@ project(SimpleLogger)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(SimpleLogger main.cpp)
+add_executable(SimpleLogger usage_example.cpp)
