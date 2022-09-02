@@ -8,7 +8,6 @@
 
 #include <chrono>
 #include <ostream>
-#include <mutex>
 #include <syncstream>
 
 #ifndef SIMPLELOGGET_LOGGER_H
@@ -34,7 +33,7 @@ namespace dev_tools {
         }
 
         template<typename Fn, typename... Args>
-        void LogFunc(Fn &&fn, Args... args) const {
+        void LogFunc(Fn fn, Args... args) const {
             Timestamp<Duration> timestamp;
             std::osyncstream sync_os_(os_);
             sync_os_ << id_ << "> "sv << timestamp << ": "sv;
