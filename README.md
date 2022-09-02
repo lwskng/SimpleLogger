@@ -1,8 +1,8 @@
 # Simple thread safe C++20 Logger
 
 ## Purpose
-Consider this a little helper for developer.
-Use this if you need to log and you don't want to bring a heavy dependency into your project.
+Consider this as a little helper for developer.
+Use this if you need to log and you don't want to bring a heavy (or another) dependency into your project.
 
 ## Details
 As for C++20 it uses:
