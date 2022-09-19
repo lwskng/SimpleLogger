@@ -14,7 +14,7 @@ As for C++20 it uses:
 - C++20 Lambda capture
 
 ## Usage
-Just copy-paste /include folder, see main.cpp as usage example. CMakeLists.txt is here just to show that you should do pretty much nothing.
+Just copy-paste /include folder, see usage_example.cpp as usage example. CMakeLists.txt is here just to show that you should do pretty much nothing.
 
 ## Third Party code
 Used date.h that is a foundation for C++20 chrono update from respective authors. 
